@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     function startTimer() {
         const selectedDate = datePicker.selectedDates[0];
+        document.getElementById("start-btn").disabled = true;
+        document.getElementById("datetime-picker").disabled = true;
+
         const timerInterval = setInterval(() => {
             const currentDate = new Date();
             const remainingTime = selectedDate - currentDate;
@@ -48,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("hours").textContent = "00";
                 document.getElementById("minutes").textContent = "00";
                 document.getElementById("seconds").textContent = "00";
+                document.getElementById("start-btn").disabled = false;
+                document.getElementById("datetime-picker").disabled = false;
                 return;
             }
 

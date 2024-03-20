@@ -1,4 +1,5 @@
 function handlePromise(event) {
+  console.log('hello');
   event.preventDefault();
 
   const delayInput = document.querySelector('input[name="delay"]');
@@ -32,4 +33,5 @@ function handlePromise(event) {
   );
   delayInput.value = '';
 }
+
 document.querySelector('.form').addEventListener('submit', handlePromise);
